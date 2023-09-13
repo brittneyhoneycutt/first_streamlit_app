@@ -31,8 +31,8 @@ try:
       fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
       streamlit.dataframe(fruityvice_normalized)
 
-except URLError as e:
-  streamlit.error()
+  except URLError as e:
+      streamlit.error()
 streamlit.write('The user entered', fruit_choice)
 add_my_fruit = streamlit.text_input('What fruit would you like to add?', 'Kiwi')
 streamlit.write('Thanks for adding', add_my_fruit)
